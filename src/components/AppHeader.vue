@@ -1,0 +1,87 @@
+<template>
+  <header>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+      <v-toolbar-title>MyPortfolioSite</v-toolbar-title>
+      <v-tabs
+        v-model="tab"
+        background-color="primary"
+        dark
+      >
+        <v-tab
+          v-for="(menuItem, index) in menuItems"
+          :key="index"
+        >
+          {{ menuItem.NAME }}
+        </v-tab>
+      </v-tabs>
+      <v-tabs-items v-model="tab">
+        <v-tab-item>
+          <!-- TODO:あとで修正 -->
+        </v-tab-item>
+      </v-tabs-items>
+    </v-app-bar>
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+    >
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item
+            v-for="(menuItem, index) in menuItems"
+            :key="index"
+          >
+            <v-list-item-title>{{ menuItem.NAME }}</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+  </header>
+</template>
+
+<script>
+import constants from '../common/constants'
+
+export default {
+  name: 'AppHeader',
+  data: () => ({
+    drawer: false,
+    tab: false,
+    menuItems: constants.MENU_ITEMS
+  })
+}
+</script>
+
+<style lang="scss" scoped>
+
+.v-app-bar__nav-icon {
+  @include display_pc {
+    display: none !important;
+  }
+}
+
+.v-tabs {
+  display: none;
+
+  @include display_pc {
+    display: block !important;
+  }
+}
+
+.v-toolbar__title {
+  overflow: visible !important;
+  margin-right: 50px !important;
+}
+
+</style>
