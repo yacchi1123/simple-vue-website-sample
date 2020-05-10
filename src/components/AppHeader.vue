@@ -14,7 +14,7 @@
           v-for="(menuItem, index) in menuItems"
           :key="index"
         >
-          {{ menuItem.NAME }}
+          {{ menuItem.name }}
         </v-tab>
       </v-tabs>
       <v-tabs-items v-model="tab">
@@ -25,22 +25,19 @@
     </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
-      absolute
       temporary
+      fixed
     >
       <v-list
         nav
         dense
       >
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
-        >
+        <v-list-item-group>
           <v-list-item
             v-for="(menuItem, index) in menuItems"
             :key="index"
           >
-            <v-list-item-title>{{ menuItem.NAME }}</v-list-item-title>
+            <v-list-item-title>{{ menuItem.name }}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -53,11 +50,13 @@ import constants from '../common/constants'
 
 export default {
   name: 'AppHeader',
-  data: () => ({
-    drawer: false,
-    tab: false,
-    menuItems: constants.MENU_ITEMS
-  })
+  data () {
+    return {
+      drawer: false,
+      tab: false,
+      menuItems: constants.menuItems
+    }
+  }
 }
 </script>
 

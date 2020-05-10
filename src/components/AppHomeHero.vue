@@ -4,7 +4,7 @@
     <v-row>
       <v-col class="home-hero__content-text">
         <p>Welcome to my website.</p>
-        <p>I'm a Engineer.</p>
+        <p>I'm a enginner.</p>
       </v-col>
     </v-row>
   </v-container>
@@ -14,7 +14,7 @@
 </script>
 <style  lang="scss" scoped>
 .home-hero__content {
-  background: url("https://yacchi-engineer.com/wp-content/uploads/2020/04/category_freelance.jpg");
+  background: url("../assets/img/home-hero.png");
   background-size: cover;
   width: 100%;
   height: 50vh;
