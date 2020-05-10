@@ -17,11 +17,6 @@
           {{ menuItem.name }}
         </v-tab>
       </v-tabs>
-      <v-tabs-items v-model="tab">
-        <v-tab-item>
-          <!-- TODO:あとで修正 -->
-        </v-tab-item>
-      </v-tabs-items>
     </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
