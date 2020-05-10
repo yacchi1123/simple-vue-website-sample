@@ -7,6 +7,14 @@
       >
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         <v-toolbar-title>MyPortfolioSite</v-toolbar-title>
+        <v-tabs>
+          <v-tab
+            v-for="(menuItem, index) in menuItems"
+            :key="index"
+          >
+            {{ menuItem.NAME }}
+          </v-tab>
+        </v-tabs>
       </v-app-bar>
       <v-navigation-drawer
         v-model="drawer"
@@ -18,14 +26,12 @@
           dense
         >
           <v-list-item-group>
-            <!-- ここから追加 -->
             <v-list-item
               v-for="menuItem in menuItems"
               :key="menuItem.NAME"
             >
               <v-list-item-title>{{ menuItem.NAME }}</v-list-item-title>
             </v-list-item>
-            <!-- ここまで追加 -->
           </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
@@ -35,16 +41,21 @@
 </template>
 
 <script>
-import constants from './common/constants' // 今回追加
+import constants from './common/constants'
 
 export default {
   data () {
     return {
       drawer: false,
-      menuItems: constants.MENU_ITEMS // 今回追加
+      menuItems: constants.MENU_ITEMS
     }
   }
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.v-toolbar__title {
+  overflow: visible !important;
+  margin-right: 50px !important;
+}
+</style>
