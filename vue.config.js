@@ -5,7 +5,7 @@ module.exports = {
   css: {
     loaderOptions: {
       scss: {
-        prependData: '@import "@/styles/common/_mixin.scss";'
+        prependData: '@import "./src/styles/common/common.scss";'
       }
     }
   }
