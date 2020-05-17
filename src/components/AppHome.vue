@@ -1,8 +1,8 @@
 <template>
-  <section id="home">
-    <AppHomeHero/>
-    <AppHomeAbout/>
-    <AppHomeWork/>
+  <section v-scroll="onScroll">
+    <AppHomeHero class="js-scroll-spy"/>
+    <AppHomeAbout class="js-scroll-spy"/>
+    <AppHomeWork class="js-scroll-spy"/>
   </section>
 </template>
 <script>
@@ -16,6 +16,18 @@ export default {
     AppHomeHero,
     AppHomeAbout,
     AppHomeWork
+  },
+  methods: {
+    onScroll (e) {
+      const els = document.querySelectorAll('.js-scroll-spy')
+      els.forEach((el, index) => {
+        const elTop = el.getBoundingClientRect().top
+        const elBottom = el.getBoundingClientRect().bottom
+        if (elTop <= 0 && elBottom >= 0) {
+          document.getElementById(`tab-${index}`).click()
+        }
+      })
+    }
   }
 }
 </script>
