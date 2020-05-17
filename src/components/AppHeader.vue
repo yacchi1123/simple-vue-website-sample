@@ -13,6 +13,7 @@
         <v-tab
           v-for="(menuItem, index) in menuItems"
           :key="index"
+          :id="`tab-${index}`"
         >
           {{ menuItem.name }}
         </v-tab>
