@@ -1,5 +1,5 @@
 <template>
-<section id="home-work" class="home-work">
+<section class="home-work">
   <div class="section__title">
     <div class="section__title-text">02. My Work</div>
   </div>
@@ -8,19 +8,15 @@
       <v-col sm="8" class="home-work__contents-img">
         <v-carousel
           hide-delimiters
-        >
-        <a
-          v-for="(workItem, index) in workItems"
-          :key="index"
-          :href="workItem.url"
-          target="_blank"
+          height="auto"
         >
           <v-carousel-item
-            :src="workItem.src"
-            class="img-fluid"
+            v-for="(workItem, index) in workItems"
+            :key="index"
+            :to="workItem.url"
           >
+            <img :src="workItem.src" alt="" class="img-fluid">
           </v-carousel-item>
-        </a>
         </v-carousel>
       </v-col>
     </v-row>
@@ -46,18 +42,5 @@ export default {
 
 .home-work__contents-img {
   text-align: center;
-  height: 300px;
-}
-
-.home-about__contents-text {
-  word-wrap: break-word;
-}
-
-.v-window {
-  height: 300px !important;
-
-  @include display_pc {
-    height: 500px !important;
-  }
 }
 </style>

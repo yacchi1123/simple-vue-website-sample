@@ -13,7 +13,7 @@
         <v-tab
           v-for="(menuItem, index) in menuItems"
           :key="index"
-          :id="`tab-${index}`"
+          :to="menuItem.url"
         >
           {{ menuItem.name }}
         </v-tab>
@@ -45,7 +45,6 @@
 import constants from '../common/constants'
 
 export default {
-  name: 'AppHeader',
   data () {
     return {
       drawer: false,

@@ -2,41 +2,41 @@ export default {
   menuItems: [
     {
       name: 'HOME',
-      url: '#'
+      url: '/'
     },
     {
       name: 'ABOUT',
-      url: '#'
+      url: '/about'
     },
     {
       name: 'WORK',
-      url: '#'
+      url: '/work'
     },
     {
       name: 'SERVICE',
-      url: '#'
+      url: '/service'
     },
     {
       name: 'BLOG',
-      url: '#'
+      url: '/blog'
     },
     {
       name: 'ACCESS',
-      url: '#'
+      url: '/access'
     }
   ],
   workItems: [
     {
       src: require('../assets/img/work-img-1.png'),
-      url: '#'
+      url: '/work#work-1'
     },
     {
       src: require('../assets/img/work-img-2.png'),
-      url: '#'
+      url: '/work#work-2'
     },
     {
       src: require('../assets/img/work-img-3.png'),
-      url: '#'
+      url: '/work#work-3'
     }
   ]
 }
