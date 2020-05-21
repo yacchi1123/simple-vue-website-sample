@@ -4,6 +4,8 @@ import Home from './components/Home.vue'
 import About from './components/About.vue'
 import Work from './components/Work.vue'
 import Service from './components/Service.vue'
+import Blog from './components/Blog.vue'
+import BlogDetail from './components/BlogDetail.vue'
 
 Vue.use(Router)
 
@@ -28,6 +30,16 @@ export default new Router({
       path: '/service',
       name: 'service',
       component: Service
+    },
+    {
+      path: '/blog',
+      name: 'blog',
+      component: Blog
+    },
+    {
+      path: '/blog-detail',
+      name: 'blog-detail',
+      component: BlogDetail
     }
   ],
   scrollBehavior (to, from, savedPosition) {
