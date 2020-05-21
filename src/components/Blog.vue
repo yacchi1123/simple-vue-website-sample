@@ -1,37 +1,33 @@
 <template>
-  <section class="home-blog">
-    <div class="section__title">
-      <div class="section__title-text">04. My Blog</div>
-    </div>
+  <section class="blog">
+    <AppBackgroundHolder :title="title"/>
     <v-container>
-      <v-row class="home-blog__contents">
+      <v-row class="blog__contents">
         <v-col md="8">
           <v-card
             v-for="(postItem, index) in postItems"
             :key="index"
             :to="{ name: 'blog-detail', query: {id: postItem.id} }"
           >
-            <p class="home-blog__contents-text">{{ postItem.title }}</p>
+            <p class="blog__contents-text">{{ postItem.title }}</p>
           </v-card>
         </v-col>
       </v-row>
-      <AppButton :button-text="buttonText" :url="url"/>
     </v-container>
   </section>
 </template>
 <script>
-import AppButton from './AppButton.vue'
+import AppBackgroundHolder from './AppBackgroundHolder.vue'
 
 export default {
   data () {
     return {
-      postItems: [],
-      buttonText: '詳しくみる',
-      url: '/blog'
+      title: 'Blog',
+      postItems: []
     }
   },
   components: {
-    AppButton
+    AppBackgroundHolder
   },
   mounted () {
     this.fetch()
@@ -44,20 +40,19 @@ export default {
       this.$store.dispatch('getPostItemsAction', params)
         .then((result) => {
           this.$store.commit('setPostItems', result)
-          const tmpPostItems = this.$store.getters.getPostItems
-          this.postItems = tmpPostItems.filter((val, index) => index < 5)
+          this.postItems = this.$store.getters.getPostItems
         })
     }
   }
 }
 </script>
-<style  lang="scss" scoped>
-.home-blog__contents {
+<style lang="scss" scoped>
+.blog__contents {
   margin-top: 20px;
   justify-content: center;
 }
 
-.home-blog__contents-text {
+.blog__contents-text {
   padding: 10px;
   font-weight: bold;
 }

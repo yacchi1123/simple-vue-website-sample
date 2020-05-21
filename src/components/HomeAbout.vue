@@ -32,7 +32,7 @@ export default {
   }
 }
 </script>
-<style  lang="scss" scoped>
+<style lang="scss" scoped>
 .home-about__contents {
   margin-top: 20px;
   justify-content: center;
@@ -44,9 +44,5 @@ export default {
   &-text {
     word-wrap: break-word;
   }
-}
-
-.home-about__button {
-  text-align: center;
 }
 </style>

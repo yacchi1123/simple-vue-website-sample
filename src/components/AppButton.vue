@@ -1,5 +1,5 @@
 <template>
-  <v-row class="home-about__button">
+  <v-row class="button">
     <v-col>
       <v-btn
         large
@@ -26,3 +26,8 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.button {
+  text-align: center;
+}
+</style>
