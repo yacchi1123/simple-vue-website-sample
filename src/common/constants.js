@@ -38,5 +38,9 @@ export default {
       src: require('../assets/img/work-img-3.png'),
       url: '/work#work-3'
     }
-  ]
+  ],
+  sampleApi: {
+    url: 'https://jsonplaceholder.typicode.com/',
+    timeout: 10000
+  }
 }
