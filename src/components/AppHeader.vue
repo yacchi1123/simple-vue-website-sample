@@ -48,7 +48,6 @@ export default {
   data () {
     return {
       drawer: false,
-      tab: false,
       menuItems: constants.menuItems
     }
   }
