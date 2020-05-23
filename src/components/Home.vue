@@ -5,6 +5,7 @@
     <HomeWork/>
     <HomeService/>
     <HomeBlog/>
+    <HomeAccess/>
   </section>
 </template>
 <script>
@@ -13,6 +14,7 @@ import HomeAbout from './HomeAbout.vue'
 import HomeWork from './HomeWork.vue'
 import HomeService from './HomeService.vue'
 import HomeBlog from './HomeBlog.vue'
+import HomeAccess from './HomeAccess.vue'
 
 export default {
   components: {
@@ -20,7 +22,8 @@ export default {
     HomeAbout,
     HomeWork,
     HomeService,
-    HomeBlog
+    HomeBlog,
+    HomeAccess
   }
 }
 </script>

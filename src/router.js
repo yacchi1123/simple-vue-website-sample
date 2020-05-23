@@ -6,6 +6,7 @@ import Work from './components/Work.vue'
 import Service from './components/Service.vue'
 import Blog from './components/Blog.vue'
 import BlogDetail from './components/BlogDetail.vue'
+import Access from './components/Access.vue'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/blog-detail',
       name: 'blog-detail',
       component: BlogDetail
+    },
+    {
+      path: '/access',
+      name: 'access',
+      component: Access
     }
   ],
   scrollBehavior (to, from, savedPosition) {
