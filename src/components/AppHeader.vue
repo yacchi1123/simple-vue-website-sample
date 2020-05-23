@@ -32,6 +32,7 @@
           <v-list-item
             v-for="(menuItem, index) in menuItems"
             :key="index"
+            :to="menuItem.url"
           >
             <v-list-item-title>{{ menuItem.name }}</v-list-item-title>
           </v-list-item>
@@ -55,7 +56,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .v-app-bar__nav-icon {
   @include display_pc {
     display: none !important;
@@ -74,5 +74,4 @@ export default {
   overflow: visible !important;
   margin-right: 50px !important;
 }
-
 </style>
