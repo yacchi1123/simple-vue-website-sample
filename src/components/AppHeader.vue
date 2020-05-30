@@ -7,7 +7,6 @@
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-toolbar-title>MyPortfolioSite</v-toolbar-title>
       <v-tabs
-        v-model="tab"
         dark
       >
         <v-tab
