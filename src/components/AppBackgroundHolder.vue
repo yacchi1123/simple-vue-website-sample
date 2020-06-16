@@ -27,10 +27,6 @@ export default {
   width: 100%;
   height: 30vh;
 
-  @include display_pc {
-    height: 30vh;
-  }
-
   &-text {
     color: white;
     text-align: center;
