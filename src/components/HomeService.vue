@@ -7,7 +7,7 @@
       <v-row class="home-service__contents">
         <v-col md="3">
           <v-card
-            :to="url.direction"
+            to="/service#direction"
             hover
           >
             <div class="home-service__card-title">
@@ -23,7 +23,7 @@
         </v-col>
         <v-col md="3">
           <v-card
-            :to="url.coding"
+            to="/service#coding"
             hover
           >
             <div class="home-service__card-title">
@@ -39,7 +39,7 @@
         </v-col>
         <v-col md="3">
           <v-card
-            :to="url.design"
+            to="/service#design"
             hover
           >
             <div class="home-service__card-title">
@@ -57,19 +57,6 @@
     </v-container>
   </section>
 </template>
-<script>
-export default {
-  data () {
-    return {
-      url: {
-        direction: '/service#direction',
-        coding: '/service#coding',
-        design: '/service#design'
-      }
-    }
-  }
-}
-</script>
 <style  lang="scss" scoped>
 .home-service__contents {
   margin-top: 20px;
